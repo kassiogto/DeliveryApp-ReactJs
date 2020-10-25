@@ -1,0 +1,81 @@
+:root {
+    --color-bg-button-primary:#8257E5;
+    --color-bg-button-secondary: #313a46;
+    --color-text-button: #fff;
+    --color-background: #F0F0F7;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+html, body{
+    height: 100vh;
+}
+
+body {
+  background-color:  var(--color-background);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+textarea:focus, input:focus, button:focus {
+    outline: none;
+}
+
+body,
+input,
+button,
+textarea {
+  font: 500 1.6rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.content {
+    overflow: hidden;
+    border-radius: 30px;
+    background-color: transparent;
+}
+.btn-secundary {
+    display: flex;
+    position: absolute;
+    color: var(--color-bg-button-secondary);
+    width: 150px;
+    height: 36px;
+    margin: -36px 0 0 0;
+    border: none;
+    border-radius: 30px;
+    padding: 10px;
+    cursor: pointer;
+    background-color: var(--color-bg-button-secondary);
+    justify-content: center;
+    align-items: center;
+    transition: all ease-in-out .3s;
+    z-index: -10;
+}
+
+.btn-primary {
+    width: 150px;
+    border: none;
+    border-radius: 30px;
+    padding: 10px;
+    background-color: var(--color-bg-button-primary);
+    color: var(--color-text-button);
+    cursor: pointer;
+    transition: all ease-in-out .3s;
+    z-index: 10;
+}
+
+.btn-primary:hover {
+    transform: translateX(-140px);
+}
+.btn-primary:hover + .btn-secundary {
+    animation-play-state: paused;
+    color: var(--color-text-button);
+}
